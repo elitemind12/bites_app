@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+</head>
+
+<body>
+    <h1> {{ menu.name }} </h1>
+    <h4>price:  {{ menu.price }}$</h4>
+    <h4>category:  {{ menu.category }}</h4>
+    <a href="{% url 'bites:update' menu.id %}">Update Bite</a>
+    <a href="{% url 'bites:delete' menu.id %}">Delete Bite</a>
+    <a href="{% url 'bites:home' %}">Back To Main</a>
+</body>
+</html>

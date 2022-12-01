@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bites</title>
+</head>
+{% comment %} 
+passing latest_list dictionary from views module.
+{% endcomment %}
+<body>
+<h1>Bites List</h1>
+    {%  if bites_list %}
+<ul>
+    {% for bite in bites_list %}
+        <li><a href="{% url 'bites:detail' bite.id %}">{{ bite.name }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No bites are available</p>
+{% endif %}
+<a href="{%  url 'bites:new' %}">Add New Menu</a>
+</body>
+</html>
