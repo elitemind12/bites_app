@@ -12,8 +12,14 @@
     <h1> {{ menu.name }} </h1>
     <h4>price:  {{ menu.price }}$</h4>
     <h4>category:  {{ menu.category }}</h4>
+    <div>
+        <h4>Image:</h4>
+        <img src="{{ menu.image.url }}" alt='bites picture'>
+    </div>
+    <div>
     <a href="{% url 'bites:update' menu.id %}">Update Bite</a>
     <a href="{% url 'bites:delete' menu.id %}">Delete Bite</a>
     <a href="{% url 'bites:home' %}">Back To Main</a>
+    </div>
 </body>
 </html>

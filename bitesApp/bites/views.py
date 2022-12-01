@@ -30,14 +30,14 @@ class DetailView(generic.DetailView):
 class CreateBites(generic.CreateView):
     model = Menu
     template_name = 'bites/new.html'
-    fields = ['name','price','category']
+    fields = ['name','price','category','image']
 
 '''........ class based built-in view for update modal object ......'''    
     
 class UpdateBites(generic.UpdateView):
     model = Menu
     template_name = 'bites/update.html'
-    fields = ['name','price','category']
+    fields = ['name','price','category','image']
 
 '''........ class based built-in view for delete modal object ......'''
 
