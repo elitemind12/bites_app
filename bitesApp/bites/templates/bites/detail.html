@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,20 +7,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail</title>
+    <script src="https://kit.fontawesome.com/70c20a4914.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'bites/css/app.css' %}">
 </head>
 
 <body>
-    <h1> {{ menu.name }} </h1>
-    <h4>price:  {{ menu.price }}$</h4>
-    <h4>category:  {{ menu.category }}</h4>
-    <div>
-        <h4>Image:</h4>
-        <img src="{{ menu.image.url }}" alt='bites picture'>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><span>U</span>~bites.co</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mb-2 mb-lg-0  mx-auto" style="width: 10px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#section1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section2">Aboutus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%  url 'bites:home' %}">Bites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%  url 'bites:new' %}">New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section6">SignIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section6">SignOut</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="detail" class="container-fluid main">
+        <h1> {{ menu.name }} </h1>
+        <div class="row">
+            <div class="col-md-6 p-5">
+                <img src="{{ menu.image.url }}" class="img-fluid" alt='bites picture'>
+            </div>
+            <div class="col-md-6 p-5 mt-5 food">
+                <h4 class="mb-2">price:  {{ menu.price }}$</h4>
+                <h4>category:  {{ menu.category }}</h4>
+                <div class="mt-3">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="mt-5">
+                    <a href="{% url 'bites:update' menu.id %}"  class="btn btn1 btn-sm">Update Bite</a>
+                    <a href="{% url 'bites:delete' menu.id %}"  class="btn btn1 btn-sm" style='background-color:red'>Delete Bite</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-    <a href="{% url 'bites:update' menu.id %}">Update Bite</a>
-    <a href="{% url 'bites:delete' menu.id %}">Delete Bite</a>
-    <a href="{% url 'bites:home' %}">Back To Main</a>
+    <div class="container-fluid footer">
+        <span>Developed by: Makyao Pro</span>
     </div>
 </body>
 </html>
