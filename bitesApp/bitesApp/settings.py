@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'bites.apps.BitesConfig',
     # 3rd party apps
     'cloudinary',
-    'django_environ',
 ]
 
 MIDDLEWARE = [
