@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+}
+
+#navbar {
+    background: linear-gradient(50deg, #fff 50%, #FF9D02 50%);
+
+}
+
+#navbar .nav-item a {
+    color: #232323;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#navbar .nav-item .active {
+    color: #fff;
+    font-weight: 700;
+}
+
+#navbar .nav-item a:hover {
+    color: #fff;
+}
+
+#navbar .navbar-brand {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#navbar .navbar-brand span {
+    font-size: 30px;
+    font-weight: 700;
+    color: #FF9D02;
+}
+
+
+
+.main {
+    padding-top: 7em;
+}
+
+.main h1 {
+    text-align: center;
+    color: #232323;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+.main h1 span {
+    color: #FF9D02;
+}
+
+.main .card {
+    width: 18rem;
+    border-radius: 2em;
+}
+
+.main .food {
+    margin-top: 2em;
+    margin-left: -2em;
+    margin-right: -2em;
+}
+
+.main .food img {
+    width: 18rem;
+    height: 18em;
+    border-radius: 2em 2em 0 0;
+}
+
+.main .foods {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .food span {
+    color: #FF9D02;
+}
+
+.main .food a {
+    border: 1px solid #FF9D02;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #fff;
+    background: #FF9D02;
+    padding: 0.4em 1.2em;
+    transition: 0.2s all;
+}
+
+.main .food a:hover {
+    background-color: #fff;
+    color: #FF9D02;
+}
+
+.main .food h6 {
+    color: #232323;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form h1{
+    margin-bottom: 0.8em;
+}
+
+form input, select {
+    height: 2rem;
+    width: 16rem;
+    padding: 0.1px 0.5px;
+    border: 1px solid #FF9D02;
+    border-radius: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    height: 2em;
+    margin-top: 2em;
+    background-color: #FF9D02;
+}
+
+.main .words a {
+    border: 1px solid #FF9D02;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #fff;
+    background: #FF9D02;
+    padding: 0.4em 1.2em;
+    transition: 0.2s all;
+}
+
+.main .words a:hover {
+    background-color: #fff;
+    color: #FF9D02;
+}
