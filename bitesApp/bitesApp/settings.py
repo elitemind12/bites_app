@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'bites.apps.BitesConfig',
     # 3rd party apps
     'cloudinary',
+    #........ add rest_framework to INSTALLED_APPS ......
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

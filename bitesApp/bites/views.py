@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from .models import Menu
+from .models import Menu, Categorie
 from django.views import generic
 from django.urls import reverse_lazy
+from rest_framework import viewsets
+from .serializers import MenuSerializer, CategorieSerializer
 
 
 '''........ class based built-in view for listing modal objects ......''' 
@@ -47,6 +49,17 @@ class DeleteBites(generic.DeleteView):
     model = Menu
     template_name = 'bites/delete.html'
     success_url = reverse_lazy('bites:home')
+
+
+""" display bites modals as json """
+
+class MenuViewSet(viewsets.ModelViewSet):
+    queryset = Menu.objects.all()
+    serializer_class = MenuSerializer
+
+class CategorieViewSet(viewsets.ModelViewSet):
+    queryset = Categorie.objects.all()
+    serializer_class = CategorieSerializer
 
 
     
